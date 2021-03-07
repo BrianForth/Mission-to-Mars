@@ -1,1 +1,3 @@
 # Mission-to-Mars
+
+This project scrapes web data for news and featured images from NASA sites and combines them with facts about Mars and Martian hemispheric pictures from the astropedia project of the USGS. These elements are then sent to a MongoDB on the local machine, where a Flask app pulls them and inserts them into a responsive web page, which includes a button that can run the scraping script to replace the information with the most recent data.
