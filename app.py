@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import scraping
 
@@ -12,6 +12,7 @@ mongo = PyMongo(app)
 def index():
     mars = mongo.db.mars.find_one()
     return render_template("index.html", mars=mars)
+
 @app.route("/scrape")
 def scrape():
     mars = mongo.db.mars
